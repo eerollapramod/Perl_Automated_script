@@ -1,0 +1,256 @@
+<HTML>
+<head>
+        <script type="text/javascript" src="./vis/dist/vis.js"></script>
+</head>
+<body>
+
+<div id="mygraph"></div>
+
+<script type="text/javascript">
+var nodes = [{id: 1, label: 'POLR2A'},{id: 2, label: 'ESR1'},{id: 3, label: 'XRCC2'},{id: 4, label: 'BARD1'},{id: 5, label: 'UIMC1'},{id: 6, label: 'FAM175A'},{id: 7, label: 'FANCD2'},{id: 8, label: 'RBBP8'},{id: 9, label: 'BRIP1'},{id: 10, label: 'TP53BP1'},{id: 11, label: 'H2AFX'},{id: 12, label: 'TP53'},{id: 13, label: 'BRCA1', color:'red'},{id: 14, label: 'CHEK1'},{id: 15, label: 'RAD51'},{id: 16, label: 'PALB2'},{id: 17, label: 'BRCA2'},{id: 18, label: 'ATM'},{id: 19, label: 'CHEK2'},{id: 20, label: 'RAD50'},{id: 21, label: 'MRE11A'},];
+var edges = [{from: 21, to:
+        20},{from: 19, to:
+        18},{from: 17, to:
+        16},{from: 21, to:
+        18},{from: 15, to:
+        17},{from: 14, to:
+        18},{from: 13, to:
+        17},{from: 18, to:
+        12},{from: 14, to:
+        15},{from: 11, to:
+        18},{from: 10, to:
+        18},{from: 10, to:
+        11},{from: 15, to:
+        21},{from: 18, to:
+        20},{from: 15, to:
+        20},{from: 13, to:
+        9},{from: 13, to:
+        8},{from: 19, to:
+        10},{from: 17, to:
+        7},{from: 14, to:
+        12},{from: 19, to:
+        12},{from: 19, to:
+        21},{from: 13, to:
+        19},{from: 6, to:
+        5},{from: 15, to:
+        18},{from: 10, to:
+        21},{from: 7, to:
+        18},{from: 13, to:
+        6},{from: 13, to:
+        12},{from: 19, to:
+        20},{from: 13, to:
+        15},{from: 13, to:
+        4},{from: 17, to:
+        3},{from: 19, to:
+        11},{from: 14, to:
+        20},{from: 13, to:
+        18},{from: 8, to:
+        18},{from: 10, to:
+        20},{from: 21, to:
+        8},{from: 13, to:
+        5},{from: 13, to:
+        11},{from: 11, to:
+        21},{from: 13, to:
+        3},{from: 16, to:
+        9},{from: 13, to:
+        14},{from: 11, to:
+        20},{from: 14, to:
+        21},{from: 17, to:
+        18},{from: 10, to:
+        12},{from: 13, to:
+        7},{from: 15, to:
+        11},{from: 13, to:
+        2},{from: 13, to:
+        10},{from: 13, to:
+        20},{from: 13, to:
+        21},{from: 13, to:
+        16},{from: 8, to:
+        20},{from: 5, to:
+        4},{from: 13, to:
+        1},{from: 17, to:
+        4},{from: 15, to:
+        4},{from: 11, to:
+        7},{from: 17, to:
+        11},{from: 11, to:
+        8},{from: 5, to:
+        18},{from: 17, to:
+        9},{from: 21, to:
+        7},{from: 17, to:
+        21},{from: 7, to:
+        16},{from: 14, to:
+        8},{from: 8, to:
+        4},{from: 15, to:
+        16},{from: 17, to:
+        20},{from: 7, to:
+        20},{from: 6, to:
+        4},{from: 21, to:
+        12},{from: 10, to:
+        5},{from: 14, to:
+        17},{from: 10, to:
+        8},{from: 5, to:
+        8},{from: 12, to:
+        20},{from: 6, to:
+        8},{from: 4, to:
+        9},{from: 11, to:
+        4},{from: 12, to:
+        4},{from: 5, to:
+        11},{from: 15, to:
+        9},{from: 18, to:
+        16},{from: 20, to:
+        4},{from: 15, to:
+        8},{from: 21, to:
+        4},{from: 20, to:
+        9},{from: 8, to:
+        16},{from: 3, to:
+        18},{from: 21, to:
+        9},{from: 3, to:
+        16},{from: 17, to:
+        8},{from: 15, to:
+        3},{from: 19, to:
+        4},{from: 14, to:
+        9},{from: 14, to:
+        4},{from: 3, to:
+        21},{from: 3, to:
+        20},{from: 18, to:
+        9},{from: 7, to:
+        4},{from: 18, to:
+        4},{from: 1, to:
+        18},{from: 16, to:
+        4},{from: 20, to:
+        16},{from: 10, to:
+        4},{from: 21, to:
+        16},{from: 5, to:
+        21},{from: 3, to:
+        9},{from: 5, to:
+        20},{from: 10, to:
+        6},{from: 8, to:
+        9},{from: 3, to:
+        4},{from: 11, to:
+        1},{from: 8, to:
+        12},{from: 6, to:
+        11},{from: 6, to:
+        18},{from: 17, to:
+        12},{from: 6, to:
+        20},{from: 3, to:
+        8},{from: 19, to:
+        5},{from: 6, to:
+        21},{from: 12, to:
+        2},{from: 11, to:
+        12},{from: 15, to:
+        7},{from: 12, to:
+        9},{from: 19, to:
+        6},{from: 14, to:
+        19},{from: 14, to:
+        1},{from: 1, to:
+        2},{from: 14, to:
+        10},{from: 1, to:
+        7},{from: 19, to:
+        17},{from: 14, to:
+        7},];
+        var container = document.getElementById('mygraph');
+        var data = {
+                nodes: nodes,
+                edges: edges
+};
+
+        var options = {physics: {barnesHut: {gravitationalConstant: -9300,
+        centralGravity: 0.55, springLength: 150, springConstant: 0.03,
+        damping: 0.085}}, smoothCurves: false};
+
+        var graph = new vis.Graph(container, data, options);
+</script>
+
+</body>
+</HTML>
+
+<HTML>
+<head>
+</head>
+
+<body>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+                google.load("visualization", "1", {packages:["corechart"]});
+                google.setOnLoadCallback(drawChart);
+                function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                        ['Protein', 'Structures'],
+['A', 22],
+['C', 16],
+['D', 28],
+['E', 46],
+['F', 9],
+['G', 15],
+['H', 12],
+['I', 20],
+['K', 40],
+['L', 46],
+['M', 5],
+['N', 32],
+['P', 20],
+['Q', 24],
+['R', 22],
+['S', 53],
+['T', 27],
+['W', 4],
+['Y', 8],
+['V', 24],
+                ]);
+        var options = {
+        title: 'Number of structures available for proteins',
+        width: 700,
+        height: 700,
+        legend: { position: 'top', maxLines: 1 },
+        bar: { groupWidth: '80%' },
+        };
+
+        var chart = new
+        google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+        }
+      </script>
+      <div id="chart_div" style="width: 700px; height: 700px;"></div>
+
+</body>
+</HTML>
+
+<HTML>
+<head>
+</head>
+
+<body>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+     <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+                ['Protein', 'Structures'],
+['CHEK2', 38],
+['TP53', 170],
+['CHEK1', 133],
+['TP53BP1', 21],
+['ESR1', 266],
+['POLR2A', 20],
+['BRCA1', 28],
+                ]);
+        var options = {
+        title: 'Number of structures available for proteins',
+        width: 700,
+        height: 700,
+        legend: { position: 'top', maxLines: 1 },
+        bar: { groupWidth: '80%' },
+        };
+
+        var chart = new
+        google.visualization.BarChart(document.getElementById('chart_div1'));
+        chart.draw(data, options);
+        }
+      </script>
+
+        <div id="chart_div1" style="width: 700px; height: 700px;"></div>
+
+</body>
+</HTML>
