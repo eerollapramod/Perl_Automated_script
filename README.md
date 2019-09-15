@@ -5,8 +5,8 @@ This script retrieves gene name of BRCA1, its sequence, isoelectric point, 20 in
 # Dependencies
 
 1. User must input the protein of interest "Q3B891" when prompted. This initiates the pipeline to retrieve the information.
-2. The [pipeline](../Assignment_Final.pl) requires Perl 5.24.3 or later and Bio Perl installed. 
-3. It also requires libraries [Vis](../Vis), [LWP](../LWP) and the file [LWP.pm](../LWP.pm) (provided within this repository). Make sure these are available from the running directory.
+2. The [pipeline](https://github.com/eerollapramod/Perl_pipeline_module_1/blob/master/Assignment_Final.pl) requires Perl 5.24.3 or later and Bio Perl installed. 
+3. It also requires libraries [Vis](https://github.com/eerollapramod/Perl_pipeline_module_1/tree/master/vis), [LWP](https://github.com/eerollapramod/Perl_pipeline_module_1/tree/master/LWP) and the file [LWP.pm](https://github.com/eerollapramod/Perl_pipeline_module_1/blob/master/LWP.pm) (provided within this repository). Make sure these are available from the running directory.
 4. Program uses necessary modules from Bio Perl such as "pICalculator". Therefore,installing these modules is essential.
 5. Script can be run from Command line, Perl command line interpreter or on Linux with Perl version 5.24.3 or later installed including all related modules of Bio Perl.
 6. The HTML files generated from this running this script can be opened using any browser.
